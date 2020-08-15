@@ -10,8 +10,7 @@
         "pay": "npx cypress run --env allure=true --spec /app/cypress/integration/pay-bills/purchase-foreign-currency-spec.js",
         "installDependencies": "rm -rf node_modules && npm i",
         "help": "npx allure help",
-        "visualizeReport": "npm run report && npx allure open cypress/allure/report",
-        "visualizeReportForDocker": "npm run report && http-server cypress/allure/report",
+        "visualizeReport": "npm run report && npx allure open -p 8999 cypress/allure/report",
         "report": "npx allure generate cypress/allure/results --clean -o cypress/allure/report",
         "clean": "rm -r cypress/allure cypress/screenshots || true"
     },
@@ -22,8 +21,7 @@
         "cypress-cucumber-preprocessor": "^2.5.4",
         "eslint": "^7.6.0",
         "eslint-plugin-chai-friendly": "^0.6.0",
-        "eslint-plugin-cypress": "^2.11.1",
-        "http-server": "^0.12.3"
+        "eslint-plugin-cypress": "^2.11.1"
     },
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true

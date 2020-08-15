@@ -13,7 +13,7 @@ echo "Running Cypress e2e tests headlessly without copying files"
 # set to "cypress run" by default
 
 docker build -t zero-bank-test .
-docker run -it -p 8999:8080 -v ${PWD}:/app zero-bank-test $@
+docker run -it -p 8999:8999 -v ${PWD}:/app zero-bank-test $@
 
 # if you need to restrict amount of memory or CPU power the
 # container can use, see

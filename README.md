@@ -27,10 +27,11 @@ if you have installed docker in your system, you can use the next commands for r
 ### Run tests
 
 ```shell
+./cy-run.sh installDependencies
 ./cy-run.sh test # running all test
-./cy-run.sh report # generating allure report http://localhost:8999 or cypress/allure/report
+./cy-run.sh visualizeReport # generating allure report http://localhost:8999 or cypress/allure/report
 ./cy-run.sh clean
-./cy-run.sh install
+# other in scripts section of your package.json
 ```
 
 ### Cypress open
