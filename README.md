@@ -4,13 +4,13 @@
 
 1. [Install Cypress to your system](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
 1. For test configuration change envrionment variables in cypress.env.json (create this file in root directory your git repo with tests)
-```json
-{
-    "BASE_URL": "http://zero.webappsecurity.com",
-    "LOGIN": "",
-    "PASSWORD": ""
-}
-```
+    ```json
+    {
+        "BASE_URL": "http://zero.webappsecurity.com",
+        "LOGIN": "",
+        "PASSWORD": ""
+    }
+    ```
 1. Use followed commands to run your test
     ```shell
     npm run installDependencies
