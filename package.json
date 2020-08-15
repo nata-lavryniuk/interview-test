@@ -1,0 +1,31 @@
+{
+    "name": "zero-bank-test",
+    "description": "UI tests for zero bank",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "Apache-2.0",
+    "private": true,
+    "scripts": {
+        "test": "npx cypress run --env allure=true",
+        "pay": "npx cypress run --env allure=true --spec /app/cypress/integration/pay-bills/purchase-foreign-currency-spec.js",
+        "installDependencies": "rm -rf node_modules && npm i",
+        "help": "npx allure help",
+        "visualizeReport": "npm run report && npx allure open cypress/allure/report",
+        "visualizeReportForDocker": "npm run report && http-server cypress/allure/report",
+        "report": "npx allure generate cypress/allure/results --clean -o cypress/allure/report",
+        "clean": "rm -r cypress/allure cypress/screenshots || true"
+    },
+    "devDependencies": {
+        "@shelex/cypress-allure-plugin": "^1.8.0",
+        "allure-commandline": "^2.13.0",
+        "cypress": "^4.12.1",
+        "cypress-cucumber-preprocessor": "^2.5.4",
+        "eslint": "^7.6.0",
+        "eslint-plugin-chai-friendly": "^0.6.0",
+        "eslint-plugin-cypress": "^2.11.1",
+        "http-server": "^0.12.3"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    }
+}

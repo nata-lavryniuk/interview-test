@@ -1,0 +1,7 @@
+*.mp4
+*.png
+*.jpg
+cypress.env.json
+package-lock.json
+node_modules
+cypress/allure

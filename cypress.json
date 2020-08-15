@@ -1,0 +1,11 @@
+{
+  "video": true,
+  "screenshots": true,
+  "defaultCommandTimeout": 7000,
+  "responseTimeout": 40000,
+  "pageLoadTimeout": 20000,
+  "env": {
+    "allure": true,
+    "allureResultsPath": "cypress/allure/results"
+  }
+}
